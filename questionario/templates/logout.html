@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conforto Térmico</title>
+    <link rel="stylesheet" type="text/css" href="static\style.css">
+    <link rel="icon" href="\static\images\logo_labeee_icon.ico">
+</head>
+<body>
+    <header class="header">
+        <nav class="logo">
+            <a href="https://labeee.ufsc.br/pt-br/" target="_blank"><img src="\static\images\logo_hablabeee_projeto.png" alt="Logo do Laboratório"><a/>
+        </nav>
+        <nav class="social-links">
+            <a href="https://www.linkedin.com/company/labeee-ufsc/" style="font-size: 14px;" target="_blank"><img src="\static\images\linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/labeee.ufsc/" target="_blank"><img src="\static\images\instagram.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/labeee.ufsc" target="_blank"><img src="\static\images\facebook.svg" alt="Facebook"></a>
+        </nav>
+    </header>
+    {% block content %}
+        <form action="{{ url_for('logout') }}" method="POST">
+            <h1>Muito obrigado!</h1>
+            <h2>Lembre-se de clicar em enviar!</h2>
+            <input class="btn" type="submit" value="Enviar">
+            <button class="btn" type="button" onclick="window.history.back();">Voltar</button>
+        </form>
+    {% endblock content %}
+</body>
